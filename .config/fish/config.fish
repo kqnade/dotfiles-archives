@@ -1,8 +1,12 @@
 if status is-interactive
-    set fish_greeting
-    starship init fish | source
-    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-    mise activate fish | source
+  set fish_greeting "
+┣┳┻┳┳┻┫.・)ノ やあ
+"
+  date '+%Y/%m/%d %H:%M:%S'
+  starship init fish | source
+  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  mise activate fish | source
+  source themes/nord.fish
 end
 
 #aliases
@@ -28,3 +32,8 @@ function mkcd
   mkdir -p $dirname
   cd $dirname
 end
+
+# cmp move hjkl
+bind -M insert k "if commandline -P; commandline -f up-line; else; commandline -i k; end"
+bind -M insert j "if commandline -P; commandline -f down-line; else; commandline -i j; end"
+
