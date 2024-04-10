@@ -11,4 +11,4 @@ local core_map = require("keymaps.coremap")
 local plugins_map = require("keymaps.pluginsmap")
 
 bind.nvim_load_mapping(core_map)
-require("keymaps.pluginsmap")
+bind.nvim_load_mapping(plugins_map)

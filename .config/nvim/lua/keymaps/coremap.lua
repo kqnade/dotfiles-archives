@@ -56,6 +56,7 @@ local core_map = {
 	["v|>"] = map_cmd(">gv"):with_desc("edit: Increase indent"),
   -- Terminal Mode
   ["t|<Esc>"] = map_cmd("<C-Bslash><C-n>"):with_desc("terminal: Exit Terminal"),
+  ["t|jk"] = map_cmd("<C-Bslash><C-n>"):with_desc("terminal: Exit Terminal"),
 }
 
 return core_map

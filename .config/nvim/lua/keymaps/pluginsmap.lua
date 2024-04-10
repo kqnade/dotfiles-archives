@@ -1,11 +1,13 @@
-local builtin = require('telescope.builtin')
+return {
+  -- telescope
+  ["n|ff"] = map_cr("<Cmd>lua require('telescope.builtin').find_files()<cr>"):with_noremap():with_silent():with_desc("Telescope: Find Files"),
+  ["n|fg"] = map_cr("<Cmd>lua require('telescope.builtin').live_grep()<cr>"):with_noremap():with_silent():with_desc("Telescope: Live grep"),
+  ["n|fb"] = map_cr("<Cmd>lua require('telescope.builtin').buffers()<cr>"):with_noremap():with_silent():with_desc("Telescope: Buffers"),
+  ["n|fh"] = map_cr("<Cmd>lua require('telescope.builtin').help_tags()<cr>"):with_noremap():with_silent():with_desc("Telescope: Help tags"),
 
-plugins_map = function()
-  --telescope
-  vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-  vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-  vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-  vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-end
-
-plugins_map()
+  -- ToggleTerm
+  ["n|tv"] = map_cr("<Cmd>ToggleTerm direction=vertical<cr>"),
+  ["n|tt"] = map_cr("<Cmd>ToggleTerm direction=horizontal<cr>"),
+  ["n|th"] = map_cr("<Cmd>ToggleTerm direction=horizontal<cr>"),
+  ["n|tf"] = map_cr("<Cmd>ToggleTerm direction=float<cr>"),
+}
