@@ -6,7 +6,7 @@ if status is-interactive
   starship init fish | source
   eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   mise activate fish | source
-  source themes/nord.fish
+  source /home/k47de/.config/fish/themes/nord.fish
 end
 
 #aliases
