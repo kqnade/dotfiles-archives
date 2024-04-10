@@ -1,5 +1,4 @@
 -- Core section
-
 -- modules load conf
 require("modules")
 
@@ -11,5 +10,3 @@ require("keymaps")
 
 -- load must settings
 require("core.settings")
-
-
