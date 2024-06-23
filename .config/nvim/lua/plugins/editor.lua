@@ -1,5 +1,5 @@
 return {
-  { 
+  {
     'rainbowhxch/accelerated-jk.nvim',
     event = "BufEnter"
   },

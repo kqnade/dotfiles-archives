@@ -1,7 +1,7 @@
 return {
   {
     'akinsho/toggleterm.nvim', cmd = 'ToggleTerm',
-    version = "*", config = true,
+    version = "*",
     config = function()
       require("toggleterm").setup{}
     end
@@ -20,13 +20,9 @@ return {
     end,
   },
   {
-    's1n7ax/nvim-window-picker',
-    name = 'window-picker',
+    "simeji/winresizer",
+    name = "winresizer",
     event = 'VeryLazy',
-    version = '2.*',
-    config = function()
-        require'window-picker'.setup()
-    end,
   },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',

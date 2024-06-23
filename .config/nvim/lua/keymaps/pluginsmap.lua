@@ -11,3 +11,4 @@ return {
   ["n|th"] = map_cr("<Cmd>ToggleTerm direction=horizontal<cr>"),
   ["n|tf"] = map_cr("<Cmd>ToggleTerm direction=float<cr>"),
 }
+
