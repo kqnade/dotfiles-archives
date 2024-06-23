@@ -19,6 +19,7 @@ alias lsg="eza -laG --group-directories-first --git --icons=always"
 alias lst="eza -lTa --group-directories-first --git --icons=always"
 alias cat='bat --paging=never'
 alias grep="rg"
+alias ping="pingu"
 
 #cd home and clear
 function ccd
