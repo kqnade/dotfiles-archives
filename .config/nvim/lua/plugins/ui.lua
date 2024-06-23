@@ -21,7 +21,6 @@ return {
               winbar = {"neo-tree"},
           },
           ignore_focus = {
-            "neo-tree",
             "lazy"
           },
           always_divide_middle = true,
@@ -69,7 +68,7 @@ return {
               path = 0,
             }
           },
-          lualine_y = {
+          lualine_z = {
             {
               'datetime',
               style = "%y/%m/%d(%a) %H:%M:%S"
