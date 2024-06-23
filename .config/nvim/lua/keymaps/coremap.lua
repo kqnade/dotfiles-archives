@@ -23,8 +23,13 @@ local core_map = {
 	["n|tk"] = map_cr("tabnext"):with_noremap():with_silent():with_desc("tab: Move to next tab"),
 	["n|tj"] = map_cr("tabprevious"):with_noremap():with_silent():with_desc("tab: Move to previous tab"),
 	["n|to"] = map_cr("tabonly"):with_noremap():with_silent():with_desc("tab: Only keep current tab"),
-  ["n|<A-]>"] = map_cr("bnext"):with_silent():with_noremap():with_desc("Buffer: Move to next buffer"),
-  ["n|<A-[>"] = map_cr("bprevious"):with_silent():with_noremap():with_desc("Buffer: Move to previous buffer"),
+  ["n|bn"] = map_cr("bnext"):with_noremap():with_silent():with_desc("buffer: Move to next buffer"),
+  ["n|<A-]>"] = map_cr("bnext"):with_noremap():with_silent():with_desc("buffer: Move to next buffer"),
+  ["n|bp"] = map_cr("bprevious"):with_noremap():with_silent():with_desc("buffer: Move to previous buffer"),
+  ["n|<A-[>"] = map_cr("bprevious"):with_noremap():with_silent():with_desc("buffer: Move to previous buffer"),
+  ["n|bd"] = map_cr("bdelete"):with_noremap():with_silent():with_desc("buffer: Delete current buffer"),
+
+
 
 	-- Insert mode
 	["i|<C-u>"] = map_cmd("<C-G>u<C-U>"):with_noremap():with_desc("edit: Delete previous block"),

@@ -18,7 +18,7 @@ return {
           section_separators = { left = '', right = '' },
           disabled_filetypes = {
               statusline = {},
-              winbar = {"neo-tree"},
+              winbar = {"neo-tree", 'toggleterm'},
           },
           ignore_focus = {
             "lazy"
@@ -51,7 +51,7 @@ return {
           lualine_a = {
             {
               'buffers',
-              mode = 2,
+              mode = 4,
             }
           },
           lualine_b = {},
@@ -77,7 +77,6 @@ return {
         },
         extensions = {"neo-tree", "fzf", "lazy", "mason", "toggleterm", "trouble"}
       }
-
     end
   },
   {
