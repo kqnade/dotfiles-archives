@@ -12,7 +12,26 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require('lualine').setup {
-        options = { theme = 'auto' },
+        options = { 
+          theme = 'auto',
+          component_separators = { left = '', right = '' },
+          section_separators = { left = '', right = '' },
+          disabled_filetypes = {
+              statusline = {},
+              winbar = {"neo-tree"},
+          },
+          ignore_focus = {
+            "neo-tree",
+            "lazy"
+          },
+          always_divide_middle = true,
+          globalstatus = false,
+          refresh = {
+            statusline = 1000,
+            tabline = 1000,
+            winbar = 1000
+          }
+        },
         sections = {
           lualine_a = {'mode'},
           lualine_b = {'branch', 'diff', 'diagnostics'},
@@ -29,28 +48,37 @@ return {
           lualine_y = {},
           lualine_z = {}
         },
-        extensions = {"neo-tree", "fzf", "lazy", "mason", "toggleterm", "trouble"}
-      }
-    end
-  },
-  {
-    'akinsho/bufferline.nvim',
-    version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    config = function ()
-      require("bufferline").setup{
-        options = {
-          mode = "buffers",
-          offsets = {
+        winbar = {
+          lualine_a = {
             {
-              filetype = "neo-tree",
-              text = "File Explorer",
-              text_align = "left",
-              separator = true
+              'buffers',
+              mode = 2,
             }
           },
+          lualine_b = {},
+          lualine_c = {},
+          lualine_x = {},
+          lualine_y = {},
+          lualine_z = {}
         },
+        tabline = {
+          lualine_a = {
+            {
+              "tabs",
+              mode = 2,
+              path = 0,
+            }
+          },
+          lualine_y = {
+            {
+              'datetime',
+              style = "%y/%m/%d(%a) %H:%M:%S"
+            }
+          }
+        },
+        extensions = {"neo-tree", "fzf", "lazy", "mason", "toggleterm", "trouble"}
       }
+
     end
   },
   {
@@ -58,7 +86,6 @@ return {
     event = "VeryLazy",
     config = function()
       vim.notify = require("notify")
-      require("notify")("Notify was loaded!")
     end,
   },
 }
