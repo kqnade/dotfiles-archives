@@ -22,7 +22,7 @@ return {
   {
     "simeji/winresizer",
     name = "winresizer",
-    event = 'VeryLazy',
+    keys = {"<C-e>"}
   },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
